@@ -1,0 +1,92 @@
+#include <stdio.h>
+void bai1(){
+	printf("1. Tinh tong\n");
+	int n;
+	printf("Moi nhap so nguyen n: ");
+	scanf("%d",&n);
+	int tong=0;
+	for (int i=0;i<n;i++){
+		tong +=i;
+		printf("Tong cac so nguyen tu 1 den %d la %d\n",i,tong);	
+	}
+	
+}
+void bai2(){
+	printf("2. Nhap so diem\n");
+	float diem;
+	printf("Moi ban nhap diem mong muon mon C: ");
+	scanf("%f",&diem);
+	printf("diem = %.2f",diem);
+		if (diem < 3){
+			printf("Can nghiem tuc xem xet lai\n");
+		}else if(diem >= 3 && diem <=4){
+			printf("Luoi hoc qua\n");	
+		}else if(diem >= 5 && diem <=6){
+			printf("Cham chi hon\n");	
+		}else if(diem >= 7 && diem <=8){
+			printf("Kien thuc on\n");
+		}else if(diem >=9 && diem <=10){
+			printf("Tiep tuc phat huy\n");
+		}else{
+			printf("Diem khong hop le\n");
+		}		
+}
+void bai3(){
+	printf("3. Thong tin ve cac thanh vien trong lop\n");
+	printf("-------So luong cac loai thuc pham can mua----------\n");
+	int n;
+	printf("Moi ban nhap so luong cac loai thuc pham can mua n:");
+	scanf("%d",&n);
+	printf("Nhap mang so tien phai tra cho cac loai thuc pham tren\n");
+	int arrSoTien[n];
+	for(int i =0; i<n; i++){
+		printf("Moi nhap mang so tien phai tra cho cac loai thuc pham thu %d:",i);
+	scanf("%d",&arrSoTien[i]);	
+	}
+	printf("---------Xuat thong tin--------------\n");
+	printf("So tien phai tra cho cac loai thuc pham la %d\n",n);
+	printf("-------Dem gia tien-----\n");
+	int count =0;
+	for (int i = 0; i<n; i++){
+		if(arrSoTien[i] >= 20 && arrSoTien[i] <= 100){
+			count++;
+			printf("So thuc pham co gia tien tu 20k den 100k la %d\n",count);	
+		}
+		
+	}
+	printf("----Tinh TB--------\n")
+	float Giatien;
+	
+	}
+int main(){
+	int luaChon;
+	do{
+		printf("-------------------MENU----------------\n");
+		printf("1. Tinh tong\n");
+		printf("2. Nhap so diem\n");
+		printf("3. Thong tin ve cac thanh vien trong lop\n");
+		printf("4. Thoat CT\n");
+		printf("----------------------------------------\n");
+		printf("Moi ban nhap lua chon:");
+		scanf("%d",&luaChon);
+		getchar();
+		switch (luaChon){
+			case 1:
+				bai1();
+				break;
+			case 2:
+				bai2();
+				break;
+			case 3:
+				bai3();
+				break;
+			case 4:
+				printf("4. Thoat CT\n");
+				return 0;
+			default: 
+				printf("Moi ban nhap lai!!!!!\n");
+		}
+	}while(luaChon !=4);
+	
+	return 0; 
+}
